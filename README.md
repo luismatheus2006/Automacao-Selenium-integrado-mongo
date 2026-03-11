@@ -387,5 +387,6 @@ GitHub Actions | CI/CD |
 
 # 👨‍💻 Autor
 
-Projeto desenvolvido por **Luiz Matheus Vasconcelos**.
+Projeto desenvolvido por **Luis Matheus Vasconcelos de Farias**.
+
 
