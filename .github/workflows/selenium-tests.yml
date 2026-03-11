@@ -6,20 +6,17 @@ on:
     branches: [ main ]
 
 jobs:
-
   test:
-
     runs-on: ubuntu-latest
     timeout-minutes: 30
 
     env:
       MONGO_URI: ${{ secrets.MONGO_URI }}
       MONGO_DB: ${{ secrets.MONGO_DB }}
-      EXECUTION_ID: ${{ github.run_id }}
+      EXECUTION_ID: ${{ github.run_id }}-${{ github.run_attempt }}
 
     steps:
-
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v4
 
       - name: Setup Java
@@ -32,11 +29,13 @@ jobs:
       - name: Run tests
         run: mvn clean test -DexecutionId=${EXECUTION_ID} -Dheadless=true -DdefaultTimeout=30
 
-      - name: Upload report
+      - name: Upload artifacts
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: cucumber-report
+          name: execution-artifacts
           path: |
             target/cucumber-report.html
+            target/cucumber-report.json
             target/test.log
+            target/surefire-reports
