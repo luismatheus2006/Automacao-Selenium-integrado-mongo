@@ -8,6 +8,7 @@ public class MongoConnection {
 
    private static final String URI = System.getenv("MONGO_URI");
    private static final String DB = System.getenv("MONGO_DB");
+
     private static MongoClient client;
 
     public static MongoDatabase getDatabase(){

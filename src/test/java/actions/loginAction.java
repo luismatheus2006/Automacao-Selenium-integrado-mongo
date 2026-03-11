@@ -1,8 +1,8 @@
 package actions;
 
 import org.framework.driver.DriverFactory;
-import org.framework.utils.FakerUtils;
-import org.framework.utils.MongoUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.framework.utils.WaitUtils;
 import org.openqa.selenium.WebDriver;
 import pages.LoginPage;
@@ -10,41 +10,12 @@ import pages.LoginPage;
 public class loginAction {
 
         WebDriver driver = DriverFactory.getDriver();
+        private static final Logger log = LoggerFactory.getLogger(loginAction.class);
 
 
-
-        public static String getEmail(){
-
-            String email = MongoUtils.getField("email");
-
-            if(email == null){
-
-                email = FakerUtils.generateEmail();
-
-                MongoUtils.setField("email", email);
-
-            }
-
-            return email;
-        }
-
-        public static String getPassword(){
-
-            String pass = MongoUtils.getField("password");
-
-            if(pass == null){
-
-                pass = FakerUtils.generatePassword();
-
-                MongoUtils.setField("password", pass);
-
-            }
-
-            return pass;
-        }
-
-        public void openSite(){
-            driver.get("https://qualeagiria.com.br/");
+    public void openSite(){
+        log.info("Abrindo site");
+        driver.get("https://qualeagiria.com.br/");
         }
 
         public void clickLogin(){
