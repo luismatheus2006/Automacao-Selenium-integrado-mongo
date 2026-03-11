@@ -323,3 +323,12 @@
 01:45:20 INFO  io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 145.0.7632.117 (resolved driver for Chrome 145)
 01:45:20 INFO  io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\MachoTuDoido\.cache\selenium\chromedriver\win64\145.0.7632.117\chromedriver.exe
 01:45:22 INFO  actions.loginAction - Abrindo site
+02:02:51 INFO  io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 145.0.7632.117 (resolved driver for Chrome 145)
+02:02:51 INFO  io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\MachoTuDoido\.cache\selenium\chromedriver\win64\145.0.7632.117\chromedriver.exe
+02:02:54 INFO  actions.loginAction - Abrindo site
+02:02:56 INFO  actions.cadastroFlowAction - Abrindo home
+02:02:56 INFO  actions.cadastroFlowAction - Clicando em Login
+02:02:57 INFO  actions.cadastroFlowAction - Clicando em Criar Conta
+02:02:59 INFO  io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 145.0.7632.117 (resolved driver for Chrome 145)
+02:02:59 INFO  io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\MachoTuDoido\.cache\selenium\chromedriver\win64\145.0.7632.117\chromedriver.exe
+02:03:02 INFO  actions.loginAction - Abrindo site

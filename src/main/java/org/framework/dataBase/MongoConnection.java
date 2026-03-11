@@ -9,6 +9,7 @@ public class MongoConnection {
    private static final String URI = System.getenv("MONGO_URI");
    private static final String DB = System.getenv("MONGO_DB");
 
+
     private static MongoClient client;
 
     public static MongoDatabase getDatabase(){
@@ -16,7 +17,7 @@ public class MongoConnection {
         if(client == null){
             client = MongoClients.create(URI);
         }
-
+        System.out.println("Mongo URI loaded: " + (URI != null));
         return client.getDatabase(DB);
     }
 
